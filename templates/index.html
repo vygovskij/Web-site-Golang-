@@ -1,0 +1,19 @@
+{{define "index"}}
+
+    {{template "header"}}
+
+        <div class="col-md-12"><br>
+            {{ range. }}
+            <div class="h-20 p-2 bg-light border rounded-3">
+              <h2 style="color: black;">{{ .Title}}</h2>
+              <p style="color: black;">{{ .Announcement}}</p>
+              <a href="/post/{{ .Id}}" class="btn btn-outline-secondary">   Read more...   </a><br>
+            </div><br>
+            {{else}}
+            <p class="lead">No post!</p>
+            {{end}}
+          </div>
+
+      {{template "footer"}}
+    {{end}}
+      
